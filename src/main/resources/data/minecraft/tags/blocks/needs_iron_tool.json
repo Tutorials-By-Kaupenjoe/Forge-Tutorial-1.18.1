@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "tutorialmod:citrine_ore",
+    "tutorialmod:citrine_block",
+    "tutorialmod:raw_citrine_block",
+    "tutorialmod:deepslate_citrine_ore",
+    "tutorialmod:netherrack_citrine_ore",
+    "tutorialmod:endstone_citrine_ore"
+  ]
+}
