@@ -7,5 +7,7 @@
   "block.tutorialmod.citrine_ore": "Citrine Ore",
   "block.tutorialmod.deepslate_citrine_ore": "Deepslate Citrine Ore",
   "block.tutorialmod.netherrack_citrine_ore": "Netherrack Citrine Ore",
-  "block.tutorialmod.endstone_citrine_ore": "Endstone Citrine Ore"
+  "block.tutorialmod.endstone_citrine_ore": "Endstone Citrine Ore",
+
+  "itemGroup.tutorialtab": "Tutorial Mod"
 }
