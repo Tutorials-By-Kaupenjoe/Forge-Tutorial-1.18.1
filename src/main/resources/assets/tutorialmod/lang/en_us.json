@@ -21,6 +21,11 @@
   "block.tutorialmod.citrine_wall": "Citrine Wall",
   "block.tutorialmod.citrine_fence_gate": "Citrine Fence Gate",
 
+  "block.tutorialmod.citrine_button": "Citrine Button",
+  "block.tutorialmod.citrine_pressure_plate": "Citrine Pressure Plate",
+  "block.tutorialmod.ebony_door": "Ebony Door",
+  "block.tutorialmod.ebony_trapdoor": "Ebony Trapdoor",
+
   "itemGroup.tutorialtab": "Tutorial Mod",
 
   "item.tutorialmod.dowsing_rod.no_valuables": "No Valuables Found!",
