@@ -17,5 +17,8 @@
 
   "itemGroup.tutorialtab": "Tutorial Mod",
 
-  "item.tutorialmod.dowsing_rod.no_valuables": "No Valuables Found!"
+  "item.tutorialmod.dowsing_rod.no_valuables": "No Valuables Found!",
+  "tooltip.tutorialmod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
+  "tooltip.tutorialmod.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information!",
+  "tooltip.tutorialmod.block.speedy_block": "I am speed!"
 }
