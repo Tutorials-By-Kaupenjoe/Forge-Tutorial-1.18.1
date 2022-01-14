@@ -4,6 +4,7 @@ import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.item.custom.CoalCokeItem;
 import net.kaupenjoe.tutorialmod.item.custom.DowsingRodItem;
 import net.kaupenjoe.tutorialmod.item.custom.LevitationSwordItem;
+import net.kaupenjoe.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -47,7 +48,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> CITRINE_HELMET = ITEMS.register("citrine_helmet",
-            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> CITRINE_CHESTPLATE = ITEMS.register("citrine_chestplate",
             () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.CHEST,
