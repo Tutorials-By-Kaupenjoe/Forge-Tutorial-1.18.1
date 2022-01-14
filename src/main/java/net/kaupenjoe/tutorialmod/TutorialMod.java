@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.painting.ModPaintings;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
@@ -38,6 +39,8 @@ public class TutorialMod {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+
+        ModPaintings.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
