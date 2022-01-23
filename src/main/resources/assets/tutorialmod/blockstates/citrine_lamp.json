@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": { "model": "tutorialmod:block/citrine_lamp_off" },
+    "clicked=true": { "model": "tutorialmod:block/citrine_lamp_on" }
+  }
+}
