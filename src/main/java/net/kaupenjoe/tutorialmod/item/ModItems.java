@@ -63,6 +63,9 @@ public class ModItems {
     public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
             () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> KAUPENBOW = ITEMS.register("kaupenbow",
+            () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).durability(500)));
+
 
 
     public static void register(IEventBus eventBus) {

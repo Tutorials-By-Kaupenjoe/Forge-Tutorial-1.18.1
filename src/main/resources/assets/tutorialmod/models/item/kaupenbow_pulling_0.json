@@ -1,0 +1,6 @@
+{
+    "parent": "tutorialmod:item/kaupenbow",
+    "textures": {
+        "layer0": "tutorialmod:item/kaupenbow_pulling_0"
+    }
+}

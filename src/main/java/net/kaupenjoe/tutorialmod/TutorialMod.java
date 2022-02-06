@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.painting.ModPaintings;
+import net.kaupenjoe.tutorialmod.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
@@ -57,6 +58,8 @@ public class TutorialMod {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_WINDOW.get(), RenderType.translucent());
+
+        ModItemProperties.addCustomItemProperties();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
