@@ -1,10 +1,7 @@
 package net.kaupenjoe.tutorialmod.item;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
-import net.kaupenjoe.tutorialmod.item.custom.CoalCokeItem;
-import net.kaupenjoe.tutorialmod.item.custom.DowsingRodItem;
-import net.kaupenjoe.tutorialmod.item.custom.LevitationSwordItem;
-import net.kaupenjoe.tutorialmod.item.custom.ModArmorItem;
+import net.kaupenjoe.tutorialmod.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -62,6 +59,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
 
 
