@@ -20,6 +20,8 @@
   "item.tutorialmod.data_tablet": "Data Tablet",
   "item.tutorialmod.kaupenbow": "Kaupenbow",
 
+  "item.tutorialmod.cucumber_seeds": "Cucumber Seeds",
+
   "block.tutorialmod.citrine_block": "Citrine Block",
   "block.tutorialmod.raw_citrine_block": "Raw Citrine Block",
   "block.tutorialmod.citrine_ore": "Citrine Ore",
@@ -44,6 +46,8 @@
 
   "block.tutorialmod.winter_window": "Winter Window",
   "block.tutorialmod.citrine_lamp": "Citrine Lamp",
+
+  "block.tutorialmod.cucumber_plant": "Cucumber Plant",
 
   "itemGroup.tutorialtab": "Tutorial Mod",
 

@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.CitrineLampBlock;
+import net.kaupenjoe.tutorialmod.block.custom.CucumberPlantBlock;
 import net.kaupenjoe.tutorialmod.block.custom.SpeedyBlock;
 import net.kaupenjoe.tutorialmod.item.ModCreativeModeTab;
 import net.kaupenjoe.tutorialmod.item.ModItems;
@@ -102,6 +103,9 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops().lightLevel(
                             (state) -> state.getValue(CitrineLampBlock.CLICKED) ? 15 : 0)),
             ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> CUCUMBER_PLANT = registerBlockWithoutBlockItem("cucumber_plant",
+            () -> new CucumberPlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
 
 
