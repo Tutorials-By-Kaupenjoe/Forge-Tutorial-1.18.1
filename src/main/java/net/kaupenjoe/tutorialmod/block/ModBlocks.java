@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.block.custom.CucumberPlantBlock;
 import net.kaupenjoe.tutorialmod.block.custom.SpeedyBlock;
 import net.kaupenjoe.tutorialmod.item.ModCreativeModeTab;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.effect.MobEffects;
@@ -101,7 +102,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> CITRINE_LAMP = registerBlock("citrine_lamp",
             () -> new CitrineLampBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(2f).requiresCorrectToolForDrops().lightLevel(
-                            (state) -> state.getValue(CitrineLampBlock.CLICKED) ? 15 : 0)),
+                            (state) -> state.getValue(CitrineLampBlock.CLICKED) ? 15 : 0)
+                    .sound(ModSounds.CITRINE_LAMP_SOUNDS)),
             ModCreativeModeTab.TUTORIAL_TAB);
 
     public static final RegistryObject<Block> CUCUMBER_PLANT = registerBlockWithoutBlockItem("cucumber_plant",
