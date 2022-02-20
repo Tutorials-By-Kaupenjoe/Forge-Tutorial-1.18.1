@@ -7,6 +7,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
@@ -30,6 +32,11 @@ public class ModConfiguredFeature {
                     Feature.RANDOM_SELECTOR.configured(new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(
                             EBONY_TREE.filteredByBlockSurvival(ModBlocks.EBONY_SAPLING.get()), 0.1f)),
                             EBONY_TREE.filteredByBlockSurvival(ModBlocks.EBONY_SAPLING.get()))));
+
+    public static final ConfiguredFeature<RandomPatchConfiguration, ?> PINK_ROSE =
+            FeatureUtils.register("flower_pink_rose", Feature.FLOWER.configured(
+                    new RandomPatchConfiguration(32, 6, 2, () -> Feature.SIMPLE_BLOCK.configured(
+                            new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PINK_ROSE.get()))).onlyWhenEmpty())));
 
 
 }
