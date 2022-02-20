@@ -53,6 +53,12 @@
 
   "block.tutorialmod.cucumber_plant": "Cucumber Plant",
 
+  "block.tutorialmod.ebony_log": "Ebony Log",
+  "block.tutorialmod.ebony_planks": "Ebony Planks",
+  "block.tutorialmod.ebony_wood": "Ebony Wood",
+  "block.tutorialmod.stripped_ebony_log": "Stripped Ebony Log",
+  "block.tutorialmod.stripped_ebony_wood": "Stripped Ebony Wood",
+
   "itemGroup.tutorialtab": "Tutorial Mod",
 
   "item.tutorialmod.dowsing_rod.no_valuables": "No Valuables Found!",
