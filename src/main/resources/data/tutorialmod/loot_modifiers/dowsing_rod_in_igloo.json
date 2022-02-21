@@ -1,0 +1,10 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/igloo_chest"
+    }
+  ],
+  "addition": "tutorialmod:dowsing_rod",
+  "type": "tutorialmod:dowsing_rod_in_igloo"
+}
