@@ -27,7 +27,9 @@ public class CucumberSeedsFromGrassAdditionModifier  extends LootModifier {
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
         // generatedLoot is the loot that would be dropped, if we wouldn't add or replace
         // anything!
-        generatedLoot.add(new ItemStack(addition, 1));
+        if(context.getRandom().nextFloat() > 0.5f) {
+            generatedLoot.add(new ItemStack(addition, 1));
+        }
         return generatedLoot;
     }
 

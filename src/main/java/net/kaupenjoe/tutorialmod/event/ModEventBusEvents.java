@@ -16,8 +16,8 @@ import javax.annotation.Nonnull;
 public class ModEventBusEvents {
 
     @SubscribeEvent
-    public static void registerModifierSerializers(@Nonnull final
-                                                   RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
+    public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>>
+                                                           event) {
         event.getRegistry().registerAll(
                 new CucumberSeedsFromGrassAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(TutorialMod.MOD_ID,"cucumber_seeds_from_grass")),

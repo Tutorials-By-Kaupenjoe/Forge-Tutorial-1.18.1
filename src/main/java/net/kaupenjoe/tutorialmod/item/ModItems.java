@@ -77,10 +77,6 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
 
-    public static final RegistryObject<Item> CITRINE_STAFF = ITEMS.register("citrine_staff",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
-
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

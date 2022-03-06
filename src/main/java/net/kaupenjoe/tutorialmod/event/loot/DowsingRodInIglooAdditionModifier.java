@@ -25,9 +25,7 @@ public class DowsingRodInIglooAdditionModifier extends LootModifier {
     @Nonnull
     @Override
     protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
-        if(context.getRandom().nextFloat() > 0.05) {
-            generatedLoot.add(new ItemStack(addition, 1));
-        }
+        generatedLoot.add(new ItemStack(addition, 1));
         return generatedLoot;
     }
 
