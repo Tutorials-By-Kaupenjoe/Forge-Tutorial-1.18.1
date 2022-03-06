@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "tutorialmod:citrine"
+    },
+    "title": "Tutorial Mod",
+    "description": "The Power lies in the Citrine!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "tutorialmod:textures/block/citrine_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tutorialmod:citrine"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
