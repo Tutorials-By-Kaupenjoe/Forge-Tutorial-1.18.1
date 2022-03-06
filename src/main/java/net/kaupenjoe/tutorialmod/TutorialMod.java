@@ -4,6 +4,7 @@ import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.painting.ModPaintings;
+import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -38,6 +39,7 @@ public class TutorialMod {
         ModSounds.register(eventBus);
 
         ModEffects.register(eventBus);
+        ModPotions.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);

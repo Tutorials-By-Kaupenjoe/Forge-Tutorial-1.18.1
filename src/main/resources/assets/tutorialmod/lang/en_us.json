@@ -26,6 +26,9 @@
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.tutorialmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
 
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
 
   "block.tutorialmod.citrine_block": "Citrine Block",
   "block.tutorialmod.raw_citrine_block": "Raw Citrine Block",
