@@ -79,6 +79,9 @@ public class ModItems {
     public static final RegistryObject<Item> CITRINE_STAFF = ITEMS.register("citrine_staff",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> GEM_CUTTER_TOOL = ITEMS.register("gem_cutter_tool",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).durability(32)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

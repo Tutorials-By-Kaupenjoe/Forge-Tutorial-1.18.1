@@ -1,13 +1,17 @@
 package net.kaupenjoe.tutorialmod;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.painting.ModPaintings;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
+import net.kaupenjoe.tutorialmod.screen.GemCuttingStationScreen;
+import net.kaupenjoe.tutorialmod.screen.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.util.BetterBrewingRecipe;
 import net.kaupenjoe.tutorialmod.util.ModItemProperties;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.alchemy.Potions;
@@ -44,6 +48,9 @@ public class TutorialMod {
         ModEffects.register(eventBus);
         ModPotions.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -67,6 +74,8 @@ public class TutorialMod {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GEM_CUTTING_STATION.get(), RenderType.translucent());
 
         ModItemProperties.addCustomItemProperties();
+
+        MenuScreens.register(ModMenuTypes.GEM_CUTTING_STATION_MENU.get(), GemCuttingStationScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

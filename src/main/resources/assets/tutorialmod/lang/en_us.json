@@ -30,6 +30,8 @@
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
 
+  "item.tutorialmod.gem_cutter_tool": "Gem Cutter Tool",
+
   "block.tutorialmod.citrine_block": "Citrine Block",
   "block.tutorialmod.raw_citrine_block": "Raw Citrine Block",
   "block.tutorialmod.citrine_ore": "Citrine Ore",
