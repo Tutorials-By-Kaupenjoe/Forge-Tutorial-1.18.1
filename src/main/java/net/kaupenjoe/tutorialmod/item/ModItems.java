@@ -82,6 +82,10 @@ public class ModItems {
     public static final RegistryObject<Item> GEM_CUTTER_TOOL = ITEMS.register("gem_cutter_tool",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).durability(32)));
 
+    public static final RegistryObject<Item> EBONY_SIGN = ITEMS.register("ebony_sign",
+            () -> new SignItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(16),
+                    ModBlocks.EBONY_SIGN.get(), ModBlocks.EBONY_WALL_SIGN.get()));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
