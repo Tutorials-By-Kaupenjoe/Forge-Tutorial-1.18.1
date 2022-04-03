@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.item.custom;
 
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.particle.ModParticles;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.util.InventoryUtil;
 import net.kaupenjoe.tutorialmod.util.ModTags;
@@ -48,6 +49,8 @@ public class DowsingRodItem extends Item {
                         addNbtToDataTablet(player, positionClicked.below(i), blockBelow);
                     }
 
+                    spawnFoundParticles(pContext, positionClicked);
+
                     pContext.getLevel().playSound(player, positionClicked, ModSounds.DOWSING_ROD_FOUND_ORE.get(),
                             SoundSource.BLOCKS, 1f, 1f);
 
@@ -65,6 +68,16 @@ public class DowsingRodItem extends Item {
                 (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
 
         return super.useOn(pContext);
+    }
+
+    private void spawnFoundParticles(UseOnContext pContext, BlockPos positionClicked) {
+        for(int i = 0; i < 360; i++) {
+            if(i % 20 == 0) {
+                pContext.getLevel().addParticle(ModParticles.CITRINE_PARTICLES.get(),
+                        positionClicked.getX() + 0.5d, positionClicked.getY() + 1, positionClicked.getZ() + 0.5d,
+                        Math.cos(i) * 0.15d, 0.15d, Math.sin(i) * 0.15d);
+            }
+        }
     }
 
     private void addNbtToDataTablet(Player player, BlockPos pos, Block blockBelow) {

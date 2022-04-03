@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.block.entity.ModWoodTypes;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.painting.ModPaintings;
+import net.kaupenjoe.tutorialmod.particle.ModParticles;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.screen.GemCuttingStationScreen;
@@ -58,6 +59,7 @@ public class TutorialMod {
         ModMenuTypes.register(eventBus);
 
         ModRecipes.register(eventBus);
+        ModParticles.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
