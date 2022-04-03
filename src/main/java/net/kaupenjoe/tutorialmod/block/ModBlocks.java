@@ -1,10 +1,7 @@
 package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
-import net.kaupenjoe.tutorialmod.block.custom.CitrineLampBlock;
-import net.kaupenjoe.tutorialmod.block.custom.CucumberPlantBlock;
-import net.kaupenjoe.tutorialmod.block.custom.ModFlammableRotatedPillarBlock;
-import net.kaupenjoe.tutorialmod.block.custom.SpeedyBlock;
+import net.kaupenjoe.tutorialmod.block.custom.*;
 import net.kaupenjoe.tutorialmod.item.ModCreativeModeTab;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
@@ -170,6 +167,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
             () -> new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.TUTORIAL_TAB);
+
+
+    public static final RegistryObject<Block> GEM_CUTTING_STATION = registerBlock("gem_cutting_station",
+            () -> new GemCuttingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.TUTORIAL_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
