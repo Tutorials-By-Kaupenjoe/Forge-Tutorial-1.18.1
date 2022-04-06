@@ -79,5 +79,7 @@
   "tooltip.tutorialmod.block.speedy_block": "I am speed!",
 
   "sounds.tutorialmod.dowsing_rod_found_ore": "Dowsing Rod Found Item Sound",
-  "effect.tutorialmod.freeze": "Freeze"
+  "effect.tutorialmod.freeze": "Freeze",
+
+  "enchantment.tutorialmod.lightning_striker": "Lightning Striker"
 }

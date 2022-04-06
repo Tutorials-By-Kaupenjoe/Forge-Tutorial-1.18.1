@@ -4,6 +4,7 @@ import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.ModWoodTypes;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
+import net.kaupenjoe.tutorialmod.enchantment.ModEnchantments;
 import net.kaupenjoe.tutorialmod.fluid.ModFluids;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.painting.ModPaintings;
@@ -63,6 +64,7 @@ public class TutorialMod {
         ModParticles.register(eventBus);
 
         ModFluids.register(eventBus);
+        ModEnchantments.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
