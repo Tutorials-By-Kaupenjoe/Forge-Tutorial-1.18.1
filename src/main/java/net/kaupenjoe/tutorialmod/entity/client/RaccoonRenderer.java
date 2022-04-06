@@ -26,7 +26,12 @@ public class RaccoonRenderer extends GeoEntityRenderer<RaccoonEntity> {
     public RenderType getRenderType(RaccoonEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(0.8F, 0.8F, 0.8F);
+        if(animatable.isBaby()) {
+            stack.scale(0.4F, 0.4F, 0.4F);
+        } else {
+            stack.scale(0.8F, 0.8F, 0.8F);
+        }
+
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
 }
