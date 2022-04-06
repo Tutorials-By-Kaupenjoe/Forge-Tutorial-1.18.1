@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tutorialmod:citrine_block"
+    }
+  ],
+  "result": {
+    "item": "tutorialmod:citrine"
+  }
+}

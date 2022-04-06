@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "tutorialmod:item/gem_cutter_tool"
-  }
-}

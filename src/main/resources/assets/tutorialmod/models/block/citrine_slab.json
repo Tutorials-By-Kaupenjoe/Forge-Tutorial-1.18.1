@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "tutorialmod:block/citrine_block",
-    "top": "tutorialmod:block/citrine_block",
-    "side": "tutorialmod:block/citrine_block"
-  }
-}

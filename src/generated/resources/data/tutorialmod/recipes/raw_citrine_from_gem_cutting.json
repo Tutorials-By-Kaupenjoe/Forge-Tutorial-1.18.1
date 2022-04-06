@@ -1,0 +1,11 @@
+{
+  "type": "tutorialmod:gem_cutting",
+  "ingredients": [
+    {
+      "item": "tutorialmod:citrine_ore"
+    }
+  ],
+  "output": {
+    "item": "tutorialmod:raw_citrine"
+  }
+}

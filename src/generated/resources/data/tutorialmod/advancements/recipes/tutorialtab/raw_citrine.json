@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "tutorialmod:raw_citrine"
+    ]
+  },
+  "criteria": {
+    "has_citrine_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tutorialmod:citrine_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tutorialmod:raw_citrine"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_citrine_ore",
+      "has_the_recipe"
+    ]
+  ]
+}
