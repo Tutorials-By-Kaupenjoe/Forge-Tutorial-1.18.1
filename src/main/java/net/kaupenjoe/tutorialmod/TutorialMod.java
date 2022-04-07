@@ -18,6 +18,7 @@ import net.kaupenjoe.tutorialmod.screen.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.util.BetterBrewingRecipe;
 import net.kaupenjoe.tutorialmod.util.ModItemProperties;
+import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -74,6 +75,7 @@ public class TutorialMod {
         ModEnchantments.register(eventBus);
 
         ModEntityTypes.register(eventBus);
+        ModVillagers.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -127,6 +129,8 @@ public class TutorialMod {
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
+
+            ModVillagers.registerPOIs();
         });
     }
 }

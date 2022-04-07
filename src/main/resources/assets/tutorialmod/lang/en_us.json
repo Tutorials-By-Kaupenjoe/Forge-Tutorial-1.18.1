@@ -83,5 +83,7 @@
   "sounds.tutorialmod.dowsing_rod_found_ore": "Dowsing Rod Found Item Sound",
   "effect.tutorialmod.freeze": "Freeze",
 
+  "entity.minecraft.villager.tutorialmod.gem_cutter": "Gem Cutter",
+
   "enchantment.tutorialmod.lightning_striker": "Lightning Striker"
 }
