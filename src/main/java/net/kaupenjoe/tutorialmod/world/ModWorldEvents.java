@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.world;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.world.gen.ModEntityGeneration;
 import net.kaupenjoe.tutorialmod.world.gen.ModFlowerGeneration;
 import net.kaupenjoe.tutorialmod.world.gen.ModOreGeneration;
 import net.kaupenjoe.tutorialmod.world.gen.ModTreeGeneration;
@@ -16,5 +17,7 @@ public class ModWorldEvents {
 
         ModTreeGeneration.generateTrees(event);
         ModFlowerGeneration.generateFlowers(event);
+
+        ModEntityGeneration.onEntitySpawn(event);
     }
 }
