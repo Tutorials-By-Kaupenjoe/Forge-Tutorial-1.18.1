@@ -27,7 +27,8 @@ public class ModConfiguredFeatures {
                     new StraightTrunkPlacer(5, 6, 3),
                     BlockStateProvider.simple(ModBlocks.EBONY_LEAVES.get()),
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 4),
-                    new TwoLayersFeatureSize(1, 0, 2)).build());
+                    new TwoLayersFeatureSize(1, 0, 2))
+            .dirt(BlockStateProvider.simple(Blocks.END_STONE)).build());
 
     public static final Holder<PlacedFeature> EBONY_CHECKED = PlacementUtils.register("ebony_checked", EBONY_TREE,
                     PlacementUtils.filteredByBlockSurvival(ModBlocks.EBONY_SAPLING.get()));
