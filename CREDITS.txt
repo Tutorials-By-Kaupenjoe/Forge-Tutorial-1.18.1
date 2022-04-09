@@ -16,3 +16,8 @@ https://creativecommons.org/licenses/by-sa/4.0/
 
 BetterBrewingRecipe Class by CAS-ual-TY from https://github.com/CAS-ual-TY/Extra-Potions (GPL-3.0 License)
 https://github.com/CAS-ual-TY/Extra-Potions/blob/main/LICENSE
+
+
+Structure Code & JSON Files all from TelepathicGrunt
+(Under MIT-License: https://github.com/TelepathicGrunt/StructureTutorialMod/blob/1.18.2-Forge-Jigsaw/LICENSE.txt):
+https://github.com/TelepathicGrunt/StructureTutorialMod
