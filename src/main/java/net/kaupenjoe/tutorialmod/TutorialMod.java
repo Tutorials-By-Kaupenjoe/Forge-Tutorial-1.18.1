@@ -3,6 +3,8 @@ package net.kaupenjoe.tutorialmod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.ModWoodTypes;
+import net.kaupenjoe.tutorialmod.config.TutorialModClientConfigs;
+import net.kaupenjoe.tutorialmod.config.TutorialModCommonConfigs;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.enchantment.ModEnchantments;
 import net.kaupenjoe.tutorialmod.entity.ModEntityTypes;
@@ -36,7 +38,9 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -81,6 +85,9 @@ public class TutorialMod {
         eventBus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, TutorialModClientConfigs.SPEC, "tutorialmod-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, TutorialModCommonConfigs.SPEC, "tutorialmod-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
