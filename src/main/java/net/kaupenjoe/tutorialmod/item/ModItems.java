@@ -50,16 +50,16 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> CITRINE_HELMET = ITEMS.register("citrine_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
+            () -> new CitrineArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> CITRINE_CHESTPLATE = ITEMS.register("citrine_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.CHEST,
+            () -> new CitrineArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> CITRINE_LEGGING = ITEMS.register("citrine_leggings",
-            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.LEGS,
+            () -> new CitrineArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> CITRINE_BOOTS = ITEMS.register("citrine_boots",
-            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.FEET,
+            () -> new CitrineArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust",
