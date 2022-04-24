@@ -57,9 +57,4 @@ public class ModEventBusEvents {
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.RACCOON.get(), RaccoonEntity.setAttributes());
     }
-
-    @SubscribeEvent
-    public static void registerArmorRenderers(final EntityRenderersEvent.AddLayers event) {
-        GeoArmorRenderer.registerArmorRenderer(CitrineArmorItem.class, new CitrineArmorRenderer());
-    }
 }
