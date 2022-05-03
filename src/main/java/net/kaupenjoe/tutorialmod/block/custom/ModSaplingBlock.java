@@ -22,4 +22,9 @@ public class ModSaplingBlock extends SaplingBlock {
     public boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
         return pState.is(otherDirt.get());
     }
+
+    @Override
+    public PlantType getPlantType(BlockGetter level, BlockPos pos) {
+        return PlantType.get("custom");
+    }
 }
