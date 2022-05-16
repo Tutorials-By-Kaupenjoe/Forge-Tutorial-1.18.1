@@ -21,6 +21,7 @@ import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.util.BetterBrewingRecipe;
 import net.kaupenjoe.tutorialmod.util.ModItemProperties;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
+import net.kaupenjoe.tutorialmod.world.dimension.ModDimensions;
 import net.kaupenjoe.tutorialmod.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -83,6 +84,7 @@ public class TutorialMod {
         ModVillagers.register(eventBus);
 
         ModStructures.register(eventBus);
+        ModDimensions.register();
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
