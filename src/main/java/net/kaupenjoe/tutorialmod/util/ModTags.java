@@ -15,6 +15,8 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> DOWSING_ROD_VALUABLES
                 = tag("dowsing_rod_valuables");
+        public static final TagKey<Block> PORTAL_FRAME_BLOCKS
+                = tag("portal_frame_blocks");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(TutorialMod.MOD_ID, name));
@@ -34,14 +36,6 @@ public class ModTags {
 
         private static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
-        }
-    }
-
-    public static class ConfiguredStructureFeatures {
-        public static final TagKey<ConfiguredStructureFeature<?, ?>> CUSTOM_STRUCTURE_TAG = tag("custom_structure_tag");
-
-        private static TagKey<ConfiguredStructureFeature<?, ?>> tag(String name) {
-            return TagKey.create(Registry.CONFIGURED_STRUCTURE_FEATURE_REGISTRY, new ResourceLocation(TutorialMod.MOD_ID, name));
         }
     }
 }

@@ -21,3 +21,7 @@ https://github.com/CAS-ual-TY/Extra-Potions/blob/main/LICENSE
 Structure Code & JSON Files all from TelepathicGrunt
 (Under MIT-License: https://github.com/TelepathicGrunt/StructureTutorialMod/blob/1.18.2-Forge-Jigsaw/LICENSE.txt):
 https://github.com/TelepathicGrunt/StructureTutorialMod
+
+
+ModTeleporter, CatalystItem, KJPortalBlock largely from https://github.com/quek04/The-Undergarden
+Under MIT-License: https://github.com/quek04/The-Undergarden/blob/1.18/LICENSE

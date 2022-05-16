@@ -20,6 +20,7 @@ import net.kaupenjoe.tutorialmod.screen.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.util.BetterBrewingRecipe;
 import net.kaupenjoe.tutorialmod.util.ModItemProperties;
+import net.kaupenjoe.tutorialmod.villager.ModPOIs;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import net.kaupenjoe.tutorialmod.world.dimension.ModDimensions;
 import net.kaupenjoe.tutorialmod.world.structure.ModStructures;
@@ -86,6 +87,8 @@ public class TutorialMod {
         ModStructures.register(eventBus);
         ModDimensions.register();
 
+        ModPOIs.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -126,6 +129,8 @@ public class TutorialMod {
         BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
 
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.KAUPEN_PORTAL.get(), RenderType.translucent());
     }
 
     private void setup(final FMLCommonSetupEvent event) {
