@@ -1,6 +1,8 @@
 package net.kaupenjoe.tutorialmod.event;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
+import net.kaupenjoe.tutorialmod.block.entity.client.AnimatedBlockRenderer;
 import net.kaupenjoe.tutorialmod.entity.ModEntityTypes;
 import net.kaupenjoe.tutorialmod.entity.client.armor.CitrineArmorRenderer;
 import net.kaupenjoe.tutorialmod.entity.custom.RaccoonEntity;
@@ -34,5 +36,10 @@ public class ModEventClientBusEvents {
     @SubscribeEvent
     public static void registerArmorRenderers(final EntityRenderersEvent.AddLayers event) {
         GeoArmorRenderer.registerArmorRenderer(CitrineArmorItem.class, new CitrineArmorRenderer());
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.ANIMATED_BLOCK_ENTITY.get(), AnimatedBlockRenderer::new);
     }
 }

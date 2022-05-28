@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.block.entity;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.entity.custom.AnimatedBlockEntity;
 import net.kaupenjoe.tutorialmod.block.entity.custom.GemCuttingStationBlockEntity;
 import net.kaupenjoe.tutorialmod.block.entity.custom.ModSignBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -24,6 +25,11 @@ public class ModBlockEntities {
                     BlockEntityType.Builder.of(ModSignBlockEntity::new,
                             ModBlocks.EBONY_WALL_SIGN.get(),
                             ModBlocks.EBONY_SIGN.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<AnimatedBlockEntity>> ANIMATED_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("animated_block_entity", () ->
+                    BlockEntityType.Builder.of(AnimatedBlockEntity::new,
+                            ModBlocks.ANIMATED_BLOCK.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

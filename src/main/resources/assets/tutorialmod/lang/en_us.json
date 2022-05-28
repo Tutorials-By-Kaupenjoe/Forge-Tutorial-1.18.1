@@ -35,7 +35,7 @@
 
   "item.tutorialmod.raccoon_spawn_egg": "Raccoon Spawn Egg",
   "item.tutorialmod.animated_item": "Animated Item",
-
+  "item.tutorialmod.animated_block": "Animated Block",
 
   "block.tutorialmod.citrine_block": "Citrine Block",
   "block.tutorialmod.raw_citrine_block": "Raw Citrine Block",
@@ -74,6 +74,7 @@
 
   "block.tutorialmod.gem_cutting_station": "Gem Cutting Station",
   "block.tutorialmod.ebony_sign": "Ebony Sign",
+  "block.tutorialmod.animated_block": "Animated Block",
 
   "itemGroup.tutorialtab": "Tutorial Mod",
 

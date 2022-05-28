@@ -99,6 +99,10 @@ public class ModItems {
     public static final RegistryObject<Item> ANIMATED_ITEM = ITEMS.register("animated_item",
             () -> new AnimatedItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
+    public static final RegistryObject<Item> ANIMATED_BLOCK_ITEM = ITEMS.register("animated_block",
+            () -> new AnimatedBlockItem(ModBlocks.ANIMATED_BLOCK.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
