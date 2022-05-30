@@ -22,6 +22,7 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -39,14 +40,14 @@ public class DowsingRodItem extends Item {
             boolean foundBlock = false;
 
             for(int i = 0; i <= positionClicked.getY() + 64; i++) {
-                Block blockBelow = pContext.getLevel().getBlockState(positionClicked.below(i)).getBlock();
+                BlockState blockBelow = pContext.getLevel().getBlockState(positionClicked.below(i));
 
                 if(isValuableBlock(blockBelow)) {
-                    outputValuableCoordinates(positionClicked.below(i), player, blockBelow);
+                    outputValuableCoordinates(positionClicked.below(i), player, blockBelow.getBlock());
                     foundBlock = true;
 
                     if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET.get())) {
-                        addNbtToDataTablet(player, positionClicked.below(i), blockBelow);
+                        addNbtToDataTablet(player, positionClicked.below(i), blockBelow.getBlock());
                     }
 
                     spawnFoundParticles(pContext, positionClicked);
@@ -105,7 +106,7 @@ public class DowsingRodItem extends Item {
                 "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"), player.getUUID());
     }
 
-    private boolean isValuableBlock(Block block) {
-        return Registry.BLOCK.getHolderOrThrow(Registry.BLOCK.getResourceKey(block).get()).is(ModTags.Blocks.DOWSING_ROD_VALUABLES);
+    private boolean isValuableBlock(BlockState state) {
+        return state.is(ModTags.Blocks.DOWSING_ROD_VALUABLES);
     }
 }

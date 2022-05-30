@@ -48,12 +48,6 @@ public class ModEventBusEvents {
     }
 
     @SubscribeEvent
-    public static void registerParticleFactories(final ParticleFactoryRegisterEvent event) {
-        Minecraft.getInstance().particleEngine.register(ModParticles.CITRINE_PARTICLES.get(),
-                CitrineParticles.Provider::new);
-    }
-
-    @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntityTypes.RACCOON.get(), RaccoonEntity.setAttributes());
     }
