@@ -1,18 +1,31 @@
 package net.kaupenjoe.tutorialmod.datagen;
 
+import java.util.function.Function;
+
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.custom.CucumberPlantBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.StandingSignBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WallSignBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-
-import java.util.function.Function;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModBlocksStateProvider extends BlockStateProvider {
     public ModBlocksStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
@@ -57,12 +70,12 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         signBlock((StandingSignBlock)ModBlocks.EBONY_SIGN.get(), (WallSignBlock)ModBlocks.EBONY_WALL_SIGN.get(),
                 blockTexture(ModBlocks.EBONY_PLANKS.get()));
 
-        simpleBlock(ModBlocks.PINK_ROSE.get(), models().cross(ModBlocks.PINK_ROSE.get().getRegistryName().getPath(),
+        simpleBlock(ModBlocks.PINK_ROSE.get(), models().cross(ForgeRegistries.BLOCKS.getKey(ModBlocks.PINK_ROSE.get()).getPath(),
                 blockTexture(ModBlocks.PINK_ROSE.get())));
-        simpleBlock(ModBlocks.EBONY_SAPLING.get(), models().cross(ModBlocks.EBONY_SAPLING.get().getRegistryName().getPath(),
+        simpleBlock(ModBlocks.EBONY_SAPLING.get(), models().cross(ForgeRegistries.BLOCKS.getKey(ModBlocks.EBONY_SAPLING.get()).getPath(),
                 blockTexture(ModBlocks.EBONY_SAPLING.get())));
 
-        simpleBlock(ModBlocks.POTTED_PINK_ROSE.get(), flowerPotCross(ModBlocks.POTTED_PINK_ROSE.get().getRegistryName().getPath()));
+        simpleBlock(ModBlocks.POTTED_PINK_ROSE.get(), flowerPotCross(ForgeRegistries.BLOCKS.getKey(ModBlocks.POTTED_PINK_ROSE.get()).getPath()));
 
         makeCrop((CucumberPlantBlock)ModBlocks.CUCUMBER_PLANT.get(), "cucumber_stage", "cucumber_stage");
     }

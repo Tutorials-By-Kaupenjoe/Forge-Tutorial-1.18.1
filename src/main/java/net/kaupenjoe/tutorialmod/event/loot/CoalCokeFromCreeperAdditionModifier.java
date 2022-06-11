@@ -1,6 +1,10 @@
 package net.kaupenjoe.tutorialmod.event.loot;
 
+import org.jetbrains.annotations.NotNull;
+
 import com.google.gson.JsonObject;
+
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.Item;
@@ -11,9 +15,6 @@ import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nonnull;
-import java.util.List;
-
 public class CoalCokeFromCreeperAdditionModifier extends LootModifier {
     private final Item addition;
 
@@ -21,10 +22,10 @@ public class CoalCokeFromCreeperAdditionModifier extends LootModifier {
         super(conditionsIn);
         this.addition = addition;
     }
-
-    @Nonnull
+    
     @Override
-    protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+    protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot,
+    		LootContext context) {
         // generatedLoot is the loot that would be dropped, if we wouldn't add or replace
         // anything!
         generatedLoot.add(new ItemStack(addition, 1));

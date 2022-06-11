@@ -1,5 +1,7 @@
 package net.kaupenjoe.tutorialmod.item;
 
+import java.util.function.Supplier;
+
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -7,8 +9,6 @@ import net.minecraft.util.LazyLoadedValue;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
-
-import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     CITRINE("citrine", 28, new int[]{2, 5, 8, 3}, 19, SoundEvents.ARMOR_EQUIP_GOLD,

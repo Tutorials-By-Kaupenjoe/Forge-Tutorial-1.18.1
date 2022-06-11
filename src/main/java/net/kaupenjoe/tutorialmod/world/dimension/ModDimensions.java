@@ -11,7 +11,7 @@ public class ModDimensions {
     public static final ResourceKey<Level> KJDIM_KEY = ResourceKey.create(Registry.DIMENSION_REGISTRY,
             new ResourceLocation(TutorialMod.MOD_ID, "kjdim"));
     public static final ResourceKey<DimensionType> KJDIM_TYPE =
-            ResourceKey.create(Registry.DIMENSION_TYPE_REGISTRY, KJDIM_KEY.getRegistryName());
+            ResourceKey.create(Registry.DIMENSION_TYPE_REGISTRY, KJDIM_KEY.location());
 
     public static void register() {
         System.out.println("Registering ModDimensions for " + TutorialMod.MOD_ID);
