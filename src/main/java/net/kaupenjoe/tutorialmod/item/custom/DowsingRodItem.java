@@ -7,11 +7,8 @@ import net.kaupenjoe.tutorialmod.util.InventoryUtil;
 import net.kaupenjoe.tutorialmod.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +18,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
@@ -60,8 +56,7 @@ public class DowsingRodItem extends Item {
             }
 
             if(!foundBlock) {
-                player.sendMessage(new TranslatableComponent("item.tutorialmod.dowsing_rod.no_valuables"),
-                        player.getUUID());
+                player.sendSystemMessage(Component.translatable("item.tutorialmod.dowsing_rod.no_valuables"));
             }
         }
 
@@ -86,7 +81,7 @@ public class DowsingRodItem extends Item {
                 player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET.get()));
 
         CompoundTag nbtData = new CompoundTag();
-        nbtData.putString("tutorialmod.last_ore", "Found " + blockBelow.asItem().getRegistryName().toString() + " at (" +
+        nbtData.putString("tutorialmod.last_ore", "Found " + blockBelow.getName() + " at (" +
                 pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
 
         dataTablet.setTag(nbtData);
@@ -95,15 +90,15 @@ public class DowsingRodItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if(Screen.hasShiftDown()) {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.tutorialmod.dowsing_rod.tooltip.shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.tutorialmod.dowsing_rod.tooltip.shift"));
         } else {
-            pTooltipComponents.add(new TranslatableComponent("tooltip.tutorialmod.dowsing_rod.tooltip"));
+            pTooltipComponents.add(Component.translatable("tooltip.tutorialmod.dowsing_rod.tooltip"));
         }
     }
 
     private void outputValuableCoordinates(BlockPos blockPos, Player player, Block blockBelow) {
-        player.sendMessage(new TextComponent("Found " + blockBelow.asItem().getRegistryName().toString() + " at " +
-                "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"), player.getUUID());
+        player.sendSystemMessage(Component.literal("Found " + blockBelow.getName() + " at " +
+                "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"));
     }
 
     private boolean isValuableBlock(BlockState state) {

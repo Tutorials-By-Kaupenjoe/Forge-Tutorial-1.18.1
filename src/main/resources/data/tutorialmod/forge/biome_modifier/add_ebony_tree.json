@@ -1,0 +1,5 @@
+{
+  "type": "tutorialmod:vegetal",
+  "biomes": "#forge:is_plains",
+  "feature": "tutorialmod:ebony_placed"
+}

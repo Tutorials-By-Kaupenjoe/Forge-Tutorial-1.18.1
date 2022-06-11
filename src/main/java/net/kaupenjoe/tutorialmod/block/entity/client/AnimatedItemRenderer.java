@@ -1,4 +1,4 @@
-package net.kaupenjoe.tutorialmod.item.client;
+package net.kaupenjoe.tutorialmod.block.entity.client;
 
 import net.kaupenjoe.tutorialmod.item.custom.AnimatedItem;
 import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;

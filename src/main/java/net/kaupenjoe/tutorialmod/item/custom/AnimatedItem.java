@@ -1,6 +1,6 @@
 package net.kaupenjoe.tutorialmod.item.custom;
 
-import net.kaupenjoe.tutorialmod.item.client.AnimatedItemRenderer;
+import net.kaupenjoe.tutorialmod.block.entity.client.AnimatedItemRenderer;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.IItemRenderProperties;

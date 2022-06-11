@@ -21,13 +21,14 @@ public class ModVillagers {
             = DeferredRegister.create(ForgeRegistries.PROFESSIONS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<PoiType> GEM_CUTTING_POI = POI_TYPES.register("gem_cutting_poi",
-            () -> new PoiType("gem_cutting_poi",
-                    PoiType.getBlockStates(ModBlocks.GEM_CUTTING_STATION.get()), 1, 1));
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.GEM_CUTTING_STATION.get().getStateDefinition().getPossibleStates()),
+                    1, 1));
 
     public static final RegistryObject<VillagerProfession> GEM_CUTTER =
             VILLAGER_PROFESSIONS.register("gem_cutter",
-                    () -> new VillagerProfession("gem_cutter", GEM_CUTTING_POI.get(),
-                            ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_WEAPONSMITH));
+                    () -> new VillagerProfession("gem_cutter", x -> x.get() == GEM_CUTTING_POI.get(),
+                            x -> x.get() == GEM_CUTTING_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                            SoundEvents.VILLAGER_WORK_WEAPONSMITH));
 
 
     public static void registerPOIs() {

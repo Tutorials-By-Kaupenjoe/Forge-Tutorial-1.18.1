@@ -1,0 +1,5 @@
+{
+  "type": "tutorialmod:ores",
+  "biomes": "#minecraft:is_end",
+  "feature": "tutorialmod:end_citrine_ore_placed"
+}

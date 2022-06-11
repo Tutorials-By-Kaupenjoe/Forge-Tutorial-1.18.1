@@ -8,7 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -32,7 +32,6 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.Optional;
-import java.util.Random;
 
 public class GemCuttingStationBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
@@ -74,7 +73,7 @@ public class GemCuttingStationBlockEntity extends BlockEntity implements MenuPro
 
     @Override
     public Component getDisplayName() {
-        return new TextComponent("Gem Cutting Station");
+        return Component.literal("Gem Cutting Station");
     }
 
     @Nullable
@@ -177,7 +176,7 @@ public class GemCuttingStationBlockEntity extends BlockEntity implements MenuPro
         if(match.isPresent()) {
             entity.itemHandler.extractItem(0,1, false);
             entity.itemHandler.extractItem(1,1, false);
-            entity.itemHandler.getStackInSlot(2).hurt(1, new Random(), null);
+            entity.itemHandler.getStackInSlot(2).hurt(1, RandomSource.create(), null);
 
             entity.itemHandler.setStackInSlot(3, new ItemStack(match.get().getResultItem().getItem(),
                     entity.itemHandler.getStackInSlot(3).getCount() + 1));

@@ -1,0 +1,5 @@
+{
+  "type": "tutorialmod:ores",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "tutorialmod:citrine_ore_placed"
+}

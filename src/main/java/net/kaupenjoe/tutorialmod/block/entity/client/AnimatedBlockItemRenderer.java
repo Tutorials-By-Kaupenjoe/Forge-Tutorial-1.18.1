@@ -1,7 +1,6 @@
-package net.kaupenjoe.tutorialmod.item.client;
+package net.kaupenjoe.tutorialmod.block.entity.client;
 
 import net.kaupenjoe.tutorialmod.item.custom.AnimatedBlockItem;
-import net.kaupenjoe.tutorialmod.item.custom.AnimatedItem;
 import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
 
 public class AnimatedBlockItemRenderer extends GeoItemRenderer<AnimatedBlockItem> {

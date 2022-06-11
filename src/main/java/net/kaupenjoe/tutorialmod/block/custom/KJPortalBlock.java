@@ -11,6 +11,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -45,7 +46,7 @@ public class KJPortalBlock extends Block {
                 .strength(-1F)
                 .noCollission()
                 .lightLevel((state) -> 10)
-                .noDrops()
+                .noLootTable()
         );
         registerDefaultState(stateDefinition.any().setValue(AXIS, Direction.Axis.X));
     }
@@ -141,7 +142,7 @@ public class KJPortalBlock extends Block {
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, Random rand) {
+    public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
         if (rand.nextInt(100) == 0) {
             worldIn.playLocalSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D,
                     (double)pos.getZ() + 0.5D, SoundEvents.PORTAL_AMBIENT,

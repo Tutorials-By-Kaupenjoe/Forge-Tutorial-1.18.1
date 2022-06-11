@@ -16,6 +16,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Consumer;
@@ -86,7 +87,7 @@ public class GemCuttingRecipeBuilder implements RecipeBuilder {
 
             pJson.add("ingredients", jsonarray);
             JsonObject jsonobject = new JsonObject();
-            jsonobject.addProperty("item", this.result.getRegistryName().toString());
+            jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
             if (this.count > 1) {
                 jsonobject.addProperty("count", this.count);
             }
@@ -97,7 +98,7 @@ public class GemCuttingRecipeBuilder implements RecipeBuilder {
         @Override
         public ResourceLocation getId() {
             return new ResourceLocation(TutorialMod.MOD_ID,
-                    this.result.getRegistryName().getPath() + "_from_gem_cutting");
+                    ForgeRegistries.ITEMS.getKey(this.result).getPath() + "_from_gem_cutting");
         }
 
         @Override

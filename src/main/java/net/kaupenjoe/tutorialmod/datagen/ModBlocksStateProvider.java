@@ -57,12 +57,12 @@ public class ModBlocksStateProvider extends BlockStateProvider {
         signBlock((StandingSignBlock)ModBlocks.EBONY_SIGN.get(), (WallSignBlock)ModBlocks.EBONY_WALL_SIGN.get(),
                 blockTexture(ModBlocks.EBONY_PLANKS.get()));
 
-        simpleBlock(ModBlocks.PINK_ROSE.get(), models().cross(ModBlocks.PINK_ROSE.get().getRegistryName().getPath(),
+        simpleBlock(ModBlocks.PINK_ROSE.get(), models().cross(ModBlocks.PINK_ROSE.get().getLootTable().getPath(),
                 blockTexture(ModBlocks.PINK_ROSE.get())));
-        simpleBlock(ModBlocks.EBONY_SAPLING.get(), models().cross(ModBlocks.EBONY_SAPLING.get().getRegistryName().getPath(),
+        simpleBlock(ModBlocks.EBONY_SAPLING.get(), models().cross(ModBlocks.EBONY_SAPLING.get().getLootTable().getPath(),
                 blockTexture(ModBlocks.EBONY_SAPLING.get())));
 
-        simpleBlock(ModBlocks.POTTED_PINK_ROSE.get(), flowerPotCross(ModBlocks.POTTED_PINK_ROSE.get().getRegistryName().getPath()));
+        simpleBlock(ModBlocks.POTTED_PINK_ROSE.get(), flowerPotCross(ModBlocks.POTTED_PINK_ROSE.get().getLootTable().getPath()));
 
         makeCrop((CucumberPlantBlock)ModBlocks.CUCUMBER_PLANT.get(), "cucumber_stage", "cucumber_stage");
     }

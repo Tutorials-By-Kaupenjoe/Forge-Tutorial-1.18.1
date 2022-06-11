@@ -1,4 +1,4 @@
-package net.kaupenjoe.tutorialmod.item.client;
+package net.kaupenjoe.tutorialmod.block.entity.client;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.item.custom.AnimatedItem;
@@ -7,17 +7,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class AnimatedItemModel extends AnimatedGeoModel<AnimatedItem> {
     @Override
-    public ResourceLocation getModelLocation(AnimatedItem object) {
+    public ResourceLocation getModelResource(AnimatedItem object) {
         return new ResourceLocation(TutorialMod.MOD_ID, "geo/animated_item.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureLocation(AnimatedItem object) {
+    public ResourceLocation getTextureResource(AnimatedItem object) {
         return new ResourceLocation(TutorialMod.MOD_ID, "textures/item/animated_item_texture.png");
     }
 
     @Override
-    public ResourceLocation getAnimationFileLocation(AnimatedItem animatable) {
+    public ResourceLocation getAnimationResource(AnimatedItem animatable) {
         return new ResourceLocation(TutorialMod.MOD_ID, "animations/animated_item.animation.json");
     }
 }

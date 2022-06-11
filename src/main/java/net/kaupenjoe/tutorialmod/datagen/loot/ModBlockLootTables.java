@@ -71,6 +71,8 @@ public class ModBlockLootTables extends BlockLoot {
 
         this.add(ModBlocks.CUCUMBER_PLANT.get(), createCropDrops(ModBlocks.CUCUMBER_PLANT.get(), ModItems.CUCUMBER.get(),
                 ModItems.CUCUMBER_SEEDS.get(), lootitemcondition$builder));
+
+        this.dropSelf(ModBlocks.ANIMATED_BLOCK.get());
     }
 
     @Override

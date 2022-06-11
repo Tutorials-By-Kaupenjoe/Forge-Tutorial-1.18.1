@@ -3,6 +3,8 @@ package net.kaupenjoe.tutorialmod.entity.client;
 import com.google.common.collect.Maps;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import com.mojang.math.Quaternion;
+import com.mojang.math.Vector3f;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.custom.RaccoonEntity;
 import net.kaupenjoe.tutorialmod.entity.variant.RaccoonVariant;
@@ -46,6 +48,8 @@ public class RaccoonRenderer extends GeoEntityRenderer<RaccoonEntity> {
         } else {
             stack.scale(0.8F, 0.8F, 0.8F);
         }
+
+        stack.mulPose(Quaternion.fromXYZDegrees(new Vector3f(0f, 90f, 0f)));
 
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }

@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod.villager;
 
+import com.google.common.collect.ImmutableSet;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
@@ -13,8 +14,9 @@ public class ModPOIs {
             = DeferredRegister.create(ForgeRegistries.POI_TYPES, TutorialMod.MOD_ID);
 
     public static final RegistryObject<PoiType> KAUPEN_PORTAL =
-            POI.register("kaupen_portal", () -> new PoiType("kaupen_portal",
-                    PoiType.getBlockStates(ModBlocks.KAUPEN_PORTAL.get()), 0, 1));
+            POI.register("kaupen_portal", () -> new PoiType(
+                    ImmutableSet.copyOf(ModBlocks.KAUPEN_PORTAL.get().getStateDefinition().getPossibleStates())
+                    , 0, 1));
 
 
     public static void register(IEventBus eventBus) {

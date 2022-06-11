@@ -22,7 +22,9 @@ import net.kaupenjoe.tutorialmod.util.BetterBrewingRecipe;
 import net.kaupenjoe.tutorialmod.util.ModItemProperties;
 import net.kaupenjoe.tutorialmod.villager.ModPOIs;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
+import net.kaupenjoe.tutorialmod.world.biomemods.ModBiomeModifiers;
 import net.kaupenjoe.tutorialmod.world.dimension.ModDimensions;
+import net.kaupenjoe.tutorialmod.world.feature.ModPlacedFeatures;
 import net.kaupenjoe.tutorialmod.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -88,6 +90,9 @@ public class TutorialMod {
         ModDimensions.register();
 
         ModPOIs.register(eventBus);
+
+        ModBiomeModifiers.register(eventBus);
+        ModPlacedFeatures.register(eventBus);
 
         eventBus.addListener(this::setup);
 

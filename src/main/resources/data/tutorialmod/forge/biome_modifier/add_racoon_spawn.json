@@ -1,0 +1,10 @@
+{
+  "type": "tutorialmod:entities",
+  "biomes": "#forge:is_plains",
+  "entity": {
+    "type": "tutorialmod:racoon",
+    "weight": 80,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}
