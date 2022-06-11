@@ -72,8 +72,8 @@ public class GemCuttingStationBlock extends BaseEntityBlock {
 	public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {
 		if (pState.getBlock() != pNewState.getBlock()) {
 			BlockEntity blockEntity = pLevel.getBlockEntity(pPos);
-			if (blockEntity instanceof GemCuttingStationBlockEntity) {
-				((GemCuttingStationBlockEntity) blockEntity).drops();
+			if (blockEntity instanceof GemCuttingStationBlockEntity be) {
+				be.drops();
 			}
 		}
 		super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
