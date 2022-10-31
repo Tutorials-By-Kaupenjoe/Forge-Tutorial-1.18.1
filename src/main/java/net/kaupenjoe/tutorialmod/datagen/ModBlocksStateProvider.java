@@ -84,4 +84,11 @@ public class ModBlocksStateProvider extends BlockStateProvider {
 
         return models;
     }
+    
+    private void simpleBlockAndItem(RegistryObject<Block> block) {
+        String name = block.getId().getPath();
+        simpleBlock(block.get());
+        itemModels().withExistingParent(name, new ResourceLocation(MODID, "block/" + name));
+    }
+    
 }
